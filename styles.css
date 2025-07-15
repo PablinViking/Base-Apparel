@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    --Linear-135deg-from01: hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+    --Linear-135deg-from02: hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+    --submit-hover: hsl(0, 88%, 90%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+
+/* --------------> Header <-------------- */
+header{
+    height: 84px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.header_img{
+    height: 22px;
+    margin-left: 32px;
+}
+/* --------------> Hero <-------------- */
+.heroImage{
+    background-image: url(images/hero-mobile.jpg);
+    width: 100%;
+    min-height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* --------------> Main <-------------- */
+main{
+    text-align: center;
+    margin-bottom: 60px;
+}
+main h1{
+    margin: 64px 66px 24px;
+    font-size: 2.4em;
+    font-weight: 300;
+    letter-spacing: 12px;
+    color: var(--Desaturated-Red);
+    
+}
+main h1 span{
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+}
+main .textHero{
+    margin: 0 39px;
+    font-size: 0.84em;
+    line-height: 1.4em;
+    color: var(--Desaturated-Red);
+}
+/* --------------> Main <-------------- */
+    /* --------------> Formulario <-------------- */
+main form{
+    margin-top: 39px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+main form input{
+    height: 48px;
+    border-radius: 25px;
+}
+
+
+main form input[type="email"]{
+    width: 311px;
+    border: 1px solid var(--Desaturated-Red);
+    padding-left: 24px;
+    padding-top: 3px;
+}
+main form input[type="email"]:focus{
+    outline: none;
+}
+main form input[type="email"]::placeholder{
+    color: var(--Desaturated-Red);
+}
+
+
+main form input[type="submit"]{
+    width: 64px;
+    position: absolute;
+    right: 32px;
+    background: linear-gradient(to right,hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    box-shadow: 0 20px 28px var(--submit-hover);
+}
+main form input[type="submit"]:hover{
+    cursor: pointer;
+    background: var(--submit-hover);
+}
+main form .iconArrow{
+    position: absolute;
+    right: 58px;
+    top: 14px;
+}
+main form .iconArrow:hover{
+    cursor: pointer;
+}
+    /* --------------> Error <-------------- */
+main form .iconError{
+    position: absolute;
+    top: 12px;
+    right: 111px;
+    display: none;
+}
+main .messError{
+    font-size: 0.75em;
+    color: var(--Dark-Grayish-Red);
+    text-align: left;
+    margin: 10px 0 0 57px;
+    display: none;
+}
+/* --------------> Fotter <-------------- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Desaturated-Red);
+    margin-bottom: 5px;
+}
+
+.attribution a {
+    color: hsl(291, 56%, 58%);
+}
+
+/* --------------> 768px <-------------- */
+@media screen and (min-width:768px) {
+    /* --------------> Header <-------------- */
+    header{
+        height: 116px;
+    }
+    .header_img{
+        height: 34px;
+        margin-left: 60px;
+    }
+    /* --------------> Hero <-------------- */
+    .heroImage{
+        background-image: url(images/hero-desktop.jpg);
+        width: 100%;
+        min-height: 500px;
+        background-repeat: no-repeat;
+        /* background-size: cover; */
+    }
+    /* --------------> Main <-------------- */
+    main h1{
+        margin: 80px 66px 40px;
+        font-size: 3.125em;
+    }
+    main .textHero{
+        margin: 0 150px;
+        font-size: 1em;
+    }
+    /* --------------> Main <-------------- */
+    /* --------------> Formulario <-------------- */
+    main form{
+        margin-top: 40px;
+    }
+
+    main form input[type="submit"]{
+        right: 229px;
+    }
+
+    main form .iconArrow{
+        position: absolute;
+        right: 253px;
+        top: 14px;
+    }
+
+    /* --------------> Error <-------------- */
+    main form .iconError{
+        right: 308px;
+    }
+    main .messError{
+        margin: 10px 0 0 253px;
+    }
+}
+
+/* --------------> 1440px <-------------- */
+@media screen and (min-width: 1440px){
+    body{
+        position: relative;
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+    }
+    /* --------------> Header <-------------- */
+    header{
+        height: 166px;
+        width: 830px;
+    }
+    .header_img{
+        height: 34px;
+        margin-left: 165px;
+    }
+    /* --------------> Hero <-------------- */
+    .heroImage{
+        width: 610px;
+        height: 800px;
+        position: absolute;
+        right: 0;
+        top: 0;
+
+    }
+    /* --------------> Main <-------------- */
+    main{
+        margin-bottom: 110px;
+        width: 830px;
+    }
+    main h1{
+        margin: 70px 165px 40px;
+        font-size: 3.375em;
+        text-align: left;
+        line-height: 1.15em;
+    }
+    main .textHero{
+        margin: 0 235px 0 165px;
+        font-size: 1em;
+        text-align: left;
+        line-height: 1.6em;
+    }
+    /* --------------> Main <-------------- */
+        /* --------------> Formulario <-------------- */
+    main form{
+        margin: 49px 0 0 165px;
+        justify-content: flex-start;
+    }
+    main form input{
+        height: 56px;
+        border-radius: 30px;
+    }
+    main form input[type="email"]{
+        width: 445px;
+        padding-left: 32px;
+        font-size: 1em;
+    }
+
+    main form input[type="submit"]{
+        width: 100px;
+        right: 220px;
+    }
+
+    main form .iconArrow{
+        position: absolute;
+        right: 264px;
+        top: 18px;
+    }
+    /* --------------> Error <-------------- */
+    main form .iconError{
+        right: 336px;
+        top: 16px;
+    }
+    main .messError{
+        margin: 10px 0 0 197px;
+    }
+
+
+    /* --------------> Footer <-------------- */
+    footer{
+        width: 830px;
+    }
+    .attribution{
+        text-align: left;
+        margin-left: 165px;
+    }
+}
