@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root{
+    --Desaturated-Red: hsl(0, 36%, 70%);
+    --Soft-Red: hsl(0, 93%, 68%);
+
+    --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+    --Background: hsl(330, 100%, 100%);
+
+    /* Gradients */
+
+    --Gradient01: hsl(0, 0%, 100%);
+    --Gradient02: hsl(0, 100%, 98%);
+    --Gradient03: hsl(0, 80%, 86%);
+    --Gradient04: hsl(0, 74%, 74%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Josefin Sans", sans-serif;
+}
+
+body{
+    background-color: var(--Gradient01);
+}
+
+/* --------------> Header <-------------- */
+header{
+    height: 84px;
+    max-width: 420px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header__logo{
+    height: 22px;
+    margin-left: 32px;
+}
+
+/* --------------> Hero <-------------- */
+.hero-container{
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+.hero-container__hero-image{
+    width: 100%;
+}
+
+/* --------------> Main <-------------- */
+main{
+    text-align: center;
+    margin: 64px auto;
+    max-width: 420px;
+}
+
+.main__h1{
+    margin: 0px 66px 24px;
+    font-size: 2.4em;
+    font-weight: 300;
+    letter-spacing: 12px;
+    color: var(--Desaturated-Red);
+}
+
+.main__h1--span{
+    font-weight: 600;
+    color: var(--Dark-Grayish-Red);
+}
+
+.main__text-hero{
+    margin: 0 39px;
+    font-size: 0.84em;
+    line-height: 1.4em;
+    color: var(--Desaturated-Red);
+}
+
+/* --------------> Main <-------------- */
+    /* --------------> Formulario <-------------- */
+.main__form{
+    width: 375px;
+    margin-top: 39px;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+}
+
+.main__form__input{
+    height: 48px;
+    border-radius: 25px;
+}
+
+.main__form__input-email{
+    width: 311px;
+    border: 1px solid var(--Desaturated-Red);
+    padding-left: 24px;
+    padding-top: 3px;
+}
+
+.main__form__input-email:focus{
+    outline: none;
+    border: 1px solid var(--Soft-Red);
+}
+
+.main__form__input-email::placeholder{
+    color: var(--Desaturated-Red);
+}
+
+.main__form__input-submit{
+    width: 64px;
+    position: absolute;
+    right: 32px;
+    padding: 14px 26px;
+    background: linear-gradient(135deg, var(--Gradient03), var(--Gradient04));
+    box-shadow: 0 20px 28px var(--Gradient03);
+}
+
+.main__form__input-submit:hover{
+    background: linear-gradient(135deg, var(--Gradient02), var(--Gradient03));
+}
+
+    /* --------------> Error <-------------- */
+
+.main__form__input-email--icon-error{
+    position: absolute;
+    top: 12px;
+    right: 111px;
+    display: none;
+}
+
+.main__form__input-email--mess-error{
+    width: 375px;
+    font-size: 0.75em;
+    color: var(--Soft-Red);
+    text-align: left;
+    margin: 6px auto 0;
+    padding-left: 56px;
+    display: none;
+}
+
+/* --------------> Footer <-------------- */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Desaturated-Red);
+    margin-bottom: 10px;
+}
+
+.attribution a {
+    color: var(--Dark-Grayish-Red);
+}
+
+.attribution a:hover{
+    color: var(--Soft-Red);
+}
+
+/* --------------> 768px <-------------- */
+@media screen and (min-width: 768px) {
+    /* --------------> Header <-------------- */
+    header{
+        height: 116px;
+        max-width: 610px;
+    }
+
+    .header__logo{
+        height: 34px;
+        margin-left: 0;
+    }
+
+    /* --------------> Hero <-------------- */
+    .hero-container{
+        content: url(images/hero-tablet.jpg);
+        max-width: 610px;
+    }
+
+    .hero-container__hero-image{
+        width: 100%;
+    }
+
+    /* --------------> Main <-------------- */
+    main{
+        max-width: 610px;
+    }
+
+    .main__h1{
+        font-size: 3.125em;
+        margin-bottom: 30px;
+    }
+
+    .main__text-hero{
+        margin: 0 70px;
+        font-size: 1em;
+    }
+
+}
+
+/* --------------> 1024px <-------------- */
+@media screen and (min-width: 1024px){
+    body{
+        position: relative;
+    }
+    /* --------------> Header <-------------- */
+    header{
+        height: 116px;
+        max-width: 512px;
+        margin: 0 0;
+        text-align: left;
+    }
+
+    .header__logo{
+        height: 34px;
+        margin-left: 56px;
+    }
+
+    /* --------------> Hero <-------------- */
+    .hero-container{
+        content: url(images/hero-desktop.jpg);
+        width: 512px;
+        margin: 0 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .hero-container__hero-image{
+        width: 100%;
+    }
+
+    /* --------------> Main <-------------- */
+    main{
+        text-align: left;
+        margin: 0 0;
+        margin-bottom: 130px;
+        max-width: 512px;
+    }
+
+    .main__h1{
+        margin: 39px 0 39px 56px;
+    }
+
+    .main__text-hero{
+        margin: 0 56px ;
+    }
+
+    /* --------------> Footer <-------------- */
+    .attribution {
+        width: 512px;
+    }
+
+    /* --------------> Main <-------------- */
+        /* --------------> Formulario <-------------- */
+    .main__form{
+        margin-left: 24px;
+    }
+
+    .main__form__input-email--mess-error{
+        text-align: left;
+        margin: 6px 0 0 0;
+        padding-left: 80px;
+    }
+}
+
+/* --------------> 1440px <-------------- */
+@media screen and (min-width: 1440px){
+    body{
+        background-image: url(images/bg-pattern-desktop.svg);
+        background-repeat: no-repeat;
+    }
+    /* --------------> Header <-------------- */
+    header{
+        height: 166px;
+        max-width: 830px;
+    }
+
+    .header__logo{
+        height: 34px;
+        margin-left: 165px;
+    }
+
+    /* --------------> Hero <-------------- */
+    .hero-container{
+        width: 610px;
+        height: 800px;
+    }
+
+    /* --------------> Main <-------------- */
+    main{
+        margin-bottom: 110px;
+        max-width: 830px;
+    }
+
+    .main__h1{
+        margin: 70px 165px 40px;
+        font-size: 3.375em;
+        text-align: left;
+        line-height: 1.15em;
+    }
+
+    .main__text-hero{
+        margin: 0 235px 0 165px;
+        font-size: 1em;
+        text-align: left;
+        line-height: 1.6em;
+    }
+
+    /* --------------> Main <-------------- */
+        /* --------------> Formulario <-------------- */
+    .main__form{
+        width: 445px;
+        margin-left: 165px;
+    }
+
+    .main__form__input{
+        height: 56px;
+        border-radius: 30px;
+    }
+
+    .main__form__input-email{
+        width: 445px;
+        padding-left: 32px;
+        font-size: 1em;
+    }
+
+    .main__form__input-submit{
+        width: 100px;
+        right: 0;
+        padding: 18px 44px;
+    }
+
+    /* --------------> Error <-------------- */
+    .main__form__input-email--icon-error{
+        top: 16px;
+        right: 118px;
+    }
+
+    .main__form__input-email--mess-error{
+        text-align: left;
+        margin: 6px 0 0 165px;
+        padding-left: 32px;
+    }
+
+    /* --------------> Footer <-------------- */
+    .attribution {
+        width: 830px;
+    }
+}
+
+
+
+
